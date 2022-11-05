@@ -74,14 +74,11 @@ const templateDrinks = (drinks) => {
 
 async function _getDrinks() {
   if (input.value != '') {
-    let url = BASE_URL + input.value;
-    console.log(url)
-    if (url) {
-      url = `www.thecocktaildb.com/api/json/v1/1/search.php?i=${input.value}`;
-    } else {
-      url = BASE_URL + input.value;
-    }
-    const response = await axios.get(url);
+    const url = BASE_URL + input.value;
+    const ing = `www.thecocktaildb.com/api/json/v1/1/search.php?i=${input.value}`;
+    console.log(gg)
+    const response = await axios.get(url, ing);
+    console.log(response)
     if (response.status !== 200) {
       throw new Error(response.status);
     }
