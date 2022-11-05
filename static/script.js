@@ -76,7 +76,6 @@ async function _getDrinks() {
   if (input.value != '') {
     const url = BASE_URL + input.value;
     const ing = `www.thecocktaildb.com/api/json/v1/1/search.php?i=${input.value}`;
-    console.log(gg)
     const response = await axios.get(url, ing);
     console.log(response)
     if (response.status !== 200) {
